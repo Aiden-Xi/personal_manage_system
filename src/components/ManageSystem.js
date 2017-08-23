@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StaffHeader from './StaffHeader'
 import StaffUserList from './StaffUserList'
+import StaffFooter from './StaffFooter'
 
 class ManageSystem extends Component {
     render() {
@@ -21,6 +22,7 @@ class ManageSystem extends Component {
             <div id="manage--system">
                 <StaffHeader />
                 <StaffUserList users={users} onDetail={this.handle} />
+                <StaffFooter />
             </div>
         )
     }

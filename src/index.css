@@ -5,15 +5,14 @@ body {
 }
 
 #manage--system {
-  border: 1px solid red;
   width: 600px;
   margin: 50px auto;
   position: relative;
 }
 
 .staff--header {
-  border: 1px solid blue;
   padding: 2px;
+  margin-bottom: 25px;
 }
 
 .header--table {
@@ -35,5 +34,59 @@ body {
 
 .header--or>* {
   padding: 0 5px;
+}
+
+.user--list {
+  width: 100%;
+  border: 2px solid #b0c4de;
+  border-radius: 4px;
+  margin-bottom: 100px;
+}
+
+.list--id {
+  width: 20%;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.list--btn {
+  color: #1e90ff;
+  font-size: 80%;
+  width: 4em;
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.user--tr {
+  cursor: pointer;
+}
+
+.footer--title {
+  text-align: center;
+}
+
+.addFrom label {
+  text-align: center;
+}
+
+.addFrom input, .addFrom select, .addFrom textarea {
+  width: 200px;
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.addFrom button {
+  padding:3px 5px;
+  width: 4em;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 5px auto;
+  display: block;
+}
+
+.addFrom p {
+  display: none;
 }
 

@@ -23,17 +23,15 @@ class StaffUserList extends Component {
 
     render() {
         let contents = []
-        {
-            if (this.props.users.length == 0) {
-                contents.push(<tr><th colSpan="5" className="tempEmpty">暂无用户</th></tr>);
-            } else {
-                {this.props.users.map((user, i) => contents.push(<User
-                    user={user}
-                    key={i}
-                    index={i}
-                    onDelete={this.props.onDelete}
-                    onDetail={this.props.onDetail} />))}
-            }
+        if (this.props.users.length === 0) {
+            contents.push(<tr><th colSpan="5" className="tempEmpty">暂无用户</th></tr>);
+        } else {
+            this.props.users.map((user, i) => contents.push(<User
+                user={user}
+                key={i}
+                index={i}
+                onDelete={this.props.onDelete}
+                onDetail={this.props.onDetail} />))
         }
         return(
             <table className="user--list">
@@ -44,9 +42,9 @@ class StaffUserList extends Component {
                     <th className="list--id">性别</th>
                     <th className="list--id">操作</th>
                 </thead>
-                <tbady>
+                <tbody>
                     {contents}
-                </tbady>
+                </tbody>
             </table>
         )
     }

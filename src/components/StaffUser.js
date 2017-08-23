@@ -24,13 +24,13 @@ class StaffUser extends Component {
     render() {
         return(
             <tr className="user--tr">
-                <td className="user--id">{this.props.user.username}</td>
-                <td className="user--id">{this.props.user.age}</td>
-                <td className="user--id">{this.props.user.identity}</td>
-                <td className="user--id">{this.props.user.gender}</td>
-                <td className="user--id">
-                    <button className="user--btn" onClick={this.handleOnDelete.bind(this)}>删除</button>
-                    <button className="user--btn" onClick={this.handleOnDetail.bind(this)}>详情</button>
+                <td className="list--id">{this.props.user.name}</td>
+                <td className="list--id">{this.props.user.age}</td>
+                <td className="list--id">{this.props.user.identity}</td>
+                <td className="list--id">{this.props.user.sex}</td>
+                <td className="list--id">
+                    <button className="list--btn" onClick={this.handleOnDelete.bind(this)}>删除</button>
+                    <button className="list--btn" onClick={this.handleOnDetail.bind(this)}>详情</button>
                 </td>
             </tr>
         )
