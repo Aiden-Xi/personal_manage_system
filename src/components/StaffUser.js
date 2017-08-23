@@ -26,7 +26,7 @@ class StaffUser extends Component {
             <tr className="user--tr">
                 <td className="list--id">{this.props.user.name}</td>
                 <td className="list--id">{this.props.user.age}</td>
-                <td className="list--id">{this.props.user.identity}</td>
+                <td className="list--id">{this.props.user.id}</td>
                 <td className="list--id">{this.props.user.sex}</td>
                 <td className="list--id">
                     <button className="list--btn" onClick={this.handleOnDelete.bind(this)}>删除</button>
