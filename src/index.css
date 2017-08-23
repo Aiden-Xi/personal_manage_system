@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#manage--system {
+  border: 1px solid red;
+  width: 600px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.staff--header {
+  border: 1px solid blue;
+  padding: 2px;
+}
+
+.header--table {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.header--title {
+  text-align: center;
+}
+
+.header--search {
+  padding: 0 5px;
+}
+
+.header--id>* {
+  padding: 0 5px;
+}
+
+.header--or>* {
+  padding: 0 5px;
+}
+
