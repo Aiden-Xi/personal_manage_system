@@ -65,17 +65,17 @@ body {
   text-align: center;
 }
 
-.addFrom label {
+.addForm label {
   text-align: center;
 }
 
-.addFrom input, .addFrom select, .addFrom textarea {
+.addForm input, .addForm select, .addForm textarea {
   width: 200px;
   margin: 0 auto 10px auto;
   display: block;
 }
 
-.addFrom button {
+.addForm button {
   padding:3px 5px;
   width: 4em;
   background-color: #1e90ff;
@@ -86,7 +86,7 @@ body {
   display: block;
 }
 
-.addFrom p {
+.addForm p {
   display: none;
 }
 

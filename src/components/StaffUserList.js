@@ -18,9 +18,9 @@ class StaffUserList extends Component {
         if (this.props.items.length === 0) {
             contents.push(<tr><th colSpan="5" className="tempEmpty">暂无用户</th></tr>);
         } else {
-            this.props.items.map((item) => contents.push(<User
+            this.props.items.map((item, i) => contents.push(<User
                 user={item}
-                key={item.key}
+                key={i}
                 onDelete={this.props.onDelete}
                 onDetail={this.props.onDetail} />))
         }

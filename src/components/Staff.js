@@ -58,12 +58,18 @@ export default class Staff {
             alert('您搜索条件错误')
             return
         }
+        
+        console.log(`过滤的条件是是是是： = ${filterType}`)
+
+        console.log(`过滤之前的数据11111 - ${this.currentStaff.length}`)
 
         if (filterType === 0) {
             this.currentStaff = this.allStaff
         } else {
             this.currentStaff = this.allStaff.filter((item) => item.info.id === filterType)
         }
+
+        console.log(`过滤之前的数据22222 - ${this.currentStaff.length}`)
     }
 
     // 排序
@@ -122,8 +128,10 @@ export default class Staff {
     // 对外开放API
     // 增
     addStaffItem(item) {
+        console.log(`添加之前的数据个数1111 - ${this.allStaff.length}`)
         let newItem = new staffItem(item)
         this.allStaff.push(newItem)
+        console.log(`添加之后的数据个数2222 - ${this.allStaff.length}`)
         // 进行 筛选 排序 搜索过滤
         this._sortStaff(this.sortType)
         this._filterType(this.filterType)

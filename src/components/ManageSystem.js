@@ -16,6 +16,7 @@ class ManageSystem extends Component {
 
     // 增加
     addStaffItem(item) {
+        console.log(`是否调用了这个方法`)
         this.setState({
             staff: this.state.staff.addStaffItem(item)
         })
@@ -48,6 +49,7 @@ class ManageSystem extends Component {
 
     // 排序
     sortStaff(sortType) {
+        console.log(`查看排序的条件 = ${sortType}`)
         this.setState({
             staff: this.state.staff.sortStaff(sortType)
         })
@@ -55,6 +57,7 @@ class ManageSystem extends Component {
 
     // 过滤
     filterStaff(filterType) {
+        console.log(`查看过滤的条件 = ${filterType}`)
         this.setState({
             staff: this.state.staff.filterStaff(filterType)
         })
@@ -62,6 +65,7 @@ class ManageSystem extends Component {
 
     // 搜索
     searchStaff(word) {
+        console.log(`查看搜索的条件 = ${word}`)
         this.setState({
             staff: this.state.staff.searchStaff(word)
         })
@@ -70,12 +74,9 @@ class ManageSystem extends Component {
     render() {
         return(
             <div id="manage--system">
-                <StaffHeader sortStaff={this.sortStaff.bind(this)} fliterStaff={this.filterStaff.bind(this)} searchStaff={this.searchStaff.bind(this)} />
+                <StaffHeader sortStaff={this.sortStaff.bind(this)} filterStaff={this.filterStaff.bind(this)} searchStaff={this.searchStaff.bind(this)} />
                 <StaffUserList items={this.state.staff.currentStaff} onDelete={this.removeStaffItem.bind(this)} onDetail={this.detailStaffItem.bind(this)} />
                 <StaffFooter addStaffItem={this.addStaffItem.bind(this)}/>
-                {
-                    console.log(`按钮点击之后的数据 = ${this.state.staffDetail}`)
-                }
                 <StaffDetail staffDetail={this.state.staffDetail} closeDetail={this.closeDetail.bind(this)} editDetail={this.editDetail.bind(this)}/>
             </div>
         )

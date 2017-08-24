@@ -21,6 +21,7 @@ class StaffUser extends Component {
     }
 
     render() {
+        console.log(`输出用户相关的信息 = ${this.props.user.info.identity}----${this.props.user.info.id}`)
         return(
             <tr className="user--tr">
                 <td className="list--id">{this.props.user.info.name}</td>
