@@ -2,15 +2,21 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class StaffHeader extends Component {
+    static propTypes = {
+        sortStaff: PropTypes.func,
+        filterStaff: PropTypes.func,
+        searchStaff: PropTypes.func
+    }
+
     render() {
         return(
             <div className="staff--header">
                 <h3 className="header--title">人员管理系统</h3>
                 <table className="header--table">
-                    <tbady>
+                    <tbody>
                         <tr>
                             <td className="header--search">
-                                <input type="text" className="search--input" ref='searchBar' placeholder="search..."/>
+                                <input onChange={this.handleOnChange} type="text" className="search--input" ref='searchBar' placeholder="search..."/>
                             </td>
                             <td className="header--id">
                                 <label htmlFor="idSelect">人员筛选</label>
@@ -31,7 +37,7 @@ class StaffHeader extends Component {
                                 </select>
                             </td>
                         </tr>
-                    </tbady>
+                    </tbody>
                 </table>
             </div>
         )

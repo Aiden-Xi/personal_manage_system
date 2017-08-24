@@ -90,3 +90,70 @@ body {
   display: none;
 }
 
+.overLay {
+  text-align: center;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-animation-name: detailMerge;
+  -moz-animation-name: detailMerge;
+  -o-animation-name: detailMerge;
+  animation-name: detailMerge;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.overLay p {
+  display: none;
+}
+
+.overLay table {
+  width: 100%;
+}
+.overLay tr {
+  line-height: 1.5em;
+}
+.overLay th {
+  width: 40%;
+}
+.overLay td {
+  width: 60%;
+  text-align: center;
+}
+.overLay input, .overLay select, .overLay textarea {
+  width: 200px;
+}
+.overLay button {
+  padding: 3px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  font-weight:bold;
+  border-right:4px;
+  margin: 5px auto;
+  display: inline-block;
+}
+
+@keyframes detailMerge {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+@-webkit-keyframes detailMerge {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}

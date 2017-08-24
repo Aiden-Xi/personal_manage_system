@@ -42,9 +42,9 @@ class StaffFooter extends Component {
                         <label hotmFor="staffAddDescription" style={{display: 'block'}}>个人描述</label>
                         <textarea ref="addDescription" id="staffAddDescription" type="text"></textarea>
                     </div>
-                    <p res="tips" className="tips">提交成功</p>
-                    <p res="tipsUnDone" className="tips">请输入完整的人员信息</p>
-                    <p res="tipsUnAge" className="tips">请输入正确的年龄</p>
+                    <p ref="tips" className="tips">提交成功</p>
+                    <p ref="tipsUnDone" className="tips">请输入完整的人员信息</p>
+                    <p ref="tipsUnAge" className="tips">请输入正确的年龄</p>
                     <div>
                         <button onClick={this.handlerAddClick.bind(this)}>提交</button>
                     </div>

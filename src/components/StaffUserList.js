@@ -4,32 +4,23 @@ import User from './StaffUser'
 
 class StaffUserList extends Component {
     static propTypes = {
-        users: PropTypes.array,
+        items: PropTypes.array,
         onDelete: PropTypes.func,
         onDetail: PropTypes.func
     }
 
     static propDefaults = {
-        users: []
+        items: []
     }
-
-    // handleOnDelete(index) {
-    //
-    // }
-    //
-    // handleOnDetail() {
-    //
-    // }
 
     render() {
         let contents = []
-        if (this.props.users.length === 0) {
+        if (this.props.items.length === 0) {
             contents.push(<tr><th colSpan="5" className="tempEmpty">暂无用户</th></tr>);
         } else {
-            this.props.users.map((user, i) => contents.push(<User
-                user={user}
-                key={i}
-                index={i}
+            this.props.items.map((item) => contents.push(<User
+                user={item}
+                key={item.key}
                 onDelete={this.props.onDelete}
                 onDetail={this.props.onDetail} />))
         }
