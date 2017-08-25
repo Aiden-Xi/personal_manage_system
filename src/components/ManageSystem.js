@@ -16,7 +16,6 @@ class ManageSystem extends Component {
 
     // 增加
     addStaffItem(item) {
-        console.log(`是否调用了这个方法`)
         this.setState({
             staff: this.state.staff.addStaffItem(item)
         })
@@ -29,7 +28,6 @@ class ManageSystem extends Component {
     }
     // 查看详情
     detailStaffItem(key) {
-        console.log(`点击 按钮 详情 = ${this.state.staff.currentStaff.filter((item) => item.key === key)[0]}`)
         this.setState({
             staffDetail: this.state.staff.currentStaff.filter((item) => item.key === key)[0]
         })
@@ -49,7 +47,6 @@ class ManageSystem extends Component {
 
     // 排序
     sortStaff(sortType) {
-        console.log(`查看排序的条件 = ${sortType}`)
         this.setState({
             staff: this.state.staff.sortStaff(sortType)
         })
@@ -57,7 +54,6 @@ class ManageSystem extends Component {
 
     // 过滤
     filterStaff(filterType) {
-        console.log(`查看过滤的条件 = ${filterType}`)
         this.setState({
             staff: this.state.staff.filterStaff(filterType)
         })
@@ -65,7 +61,6 @@ class ManageSystem extends Component {
 
     // 搜索
     searchStaff(word) {
-        console.log(`查看搜索的条件 = ${word}`)
         this.setState({
             staff: this.state.staff.searchStaff(word)
         })

@@ -53,29 +53,25 @@ export default class Staff {
 
     // 筛选
     _filterType(filterType) {
-        this.filterType = filterType
-        if (filterType < 0 || filterType > 4) {
+        let temp_filterType = parseInt(filterType, 10)
+        this.filterType = temp_filterType
+        if (temp_filterType < 0 || temp_filterType > 4) {
             alert('您搜索条件错误')
             return
         }
-        
-        console.log(`过滤的条件是是是是： = ${filterType}`)
 
-        console.log(`过滤之前的数据11111 - ${this.currentStaff.length}`)
-
-        if (filterType === 0) {
+        if (temp_filterType === 0) {
             this.currentStaff = this.allStaff
         } else {
-            this.currentStaff = this.allStaff.filter((item) => item.info.id === filterType)
+            this.currentStaff = this.allStaff.filter((item) => item.info.id === temp_filterType)
         }
-
-        console.log(`过滤之前的数据22222 - ${this.currentStaff.length}`)
     }
 
     // 排序
     _sortStaff(sortType) {
-        this.sortType = sortType
-        switch(parseInt(sortType, 10)) {
+        let temp_sortType = parseInt(sortType, 10)
+        this.sortType = temp_sortType
+        switch(temp_sortType) {
             case 0: // 身份
                 this.allStaff.sort((item1, item2) => {
                     if (item1.info.id < item2.info.id) {
@@ -128,10 +124,8 @@ export default class Staff {
     // 对外开放API
     // 增
     addStaffItem(item) {
-        console.log(`添加之前的数据个数1111 - ${this.allStaff.length}`)
         let newItem = new staffItem(item)
         this.allStaff.push(newItem)
-        console.log(`添加之后的数据个数2222 - ${this.allStaff.length}`)
         // 进行 筛选 排序 搜索过滤
         this._sortStaff(this.sortType)
         this._filterType(this.filterType)
@@ -141,7 +135,6 @@ export default class Staff {
     // 删除
     removeStaffItem(key) {
         let newStaff = this.allStaff.filter((item) => item.key !== key)
-
         this.allStaff = newStaff
         // 进行 筛选 排序 搜索过滤
         this._filterType(this.filterType)

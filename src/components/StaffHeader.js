@@ -27,7 +27,6 @@ class StaffHeader extends Component {
     handleFilter(event) {
         let sel = ReactDOM.findDOMNode(this.refs.selIdentity)
         let selValue = sel.options[sel.selectedIndex].value
-        console.log(`过滤的条件就是ssss ==== ${selValue}`)
         this.props.filterStaff(selValue)
     }
 

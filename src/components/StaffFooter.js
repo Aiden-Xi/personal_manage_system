@@ -8,7 +8,8 @@ class StaffFooter extends Component {
         addStaffItem: PropTypes.func
     }
 
-    handlerAddClick() {
+    handlerAddClick(event) {
+        event.preventDefault();
         if (this.props.addStaffItem) {
             let item = {}
             let addForm = ReactDOM.findDOMNode(this.refs.addForm)
@@ -21,8 +22,6 @@ class StaffFooter extends Component {
             item.description = addForm.querySelector('#staffAddDescription').value.trim();
             item.sex = sex.options[sex.selectedIndex].value;
             item.identity = identity.options[identity.selectedIndex].value;
-
-            console.log(`拼接的参数请求 = ${item.identity}--${item.name}`)
 
             /*
              *表单验证
